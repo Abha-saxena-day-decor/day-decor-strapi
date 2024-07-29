@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "address_books",
+  "info": {
+    "singularName": "address-book",
+    "pluralName": "address-books",
+    "displayName": "AddressBook",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "addressLine": {
+      "type": "text",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "address_books"
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "tag": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "pincode": {
+      "type": "integer",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "alternatePhoneNumber": {
+      "type": "integer"
+    },
+    "recipientEmail": {
+      "type": "email"
+    }
+  }
+}

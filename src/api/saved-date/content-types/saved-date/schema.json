@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "saved_dates",
+  "info": {
+    "singularName": "saved-date",
+    "pluralName": "saved-dates",
+    "displayName": "savedDates",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "occasionDate": {
+      "type": "date"
+    },
+    "occasion": {
+      "type": "string"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "saved_dates"
+    }
+  }
+}

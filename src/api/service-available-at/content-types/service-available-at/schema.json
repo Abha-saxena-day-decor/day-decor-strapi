@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_available_ats",
+  "info": {
+    "singularName": "service-available-at",
+    "pluralName": "service-available-ats",
+    "displayName": "serviceAvailableAt",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "place": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "uid": {
+      "type": "uid",
+      "targetField": "place"
+    }
+  }
+}
