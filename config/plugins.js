@@ -22,9 +22,25 @@ module.exports = {
     },
     meilisearch: {
         config: {
-            host: 'http://127.0.0.1:7700',
-            apiKey: 's0kaaR9Z9H7Dg_xjydhOUG3oNjIuxgJwfQjD2ZQvBT4',
+            host: 'https://ms-ae7b8064b19e-11977.fra.meilisearch.io',
+            apiKey: '5ec98fb051844280ad06d48f89c022027ea7cfff',
             product: {
+                entriesQuery: {
+                    limit: 10
+                },
+                indexName: ['product'],
+                settings: {
+                    synonyms: {
+                        party: ['parties', 'function', "event", "occason", "party", "program"],
+                    },
+
+                }
+            },
+            catrgory: {
+                entriesQuery: {
+                    limit: 10
+                },
+                indexName: ['product'],
                 settings: {
                     synonyms: {
                         party: ['parties', 'function', "event", "occason", "party", "program"],
